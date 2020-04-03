@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick n' Pay</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">   <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <!-- Custom styles -->
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/0f0c45fea2.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <!-- jQuery -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <!-- container -->
+    <div id="page-container">
+        <nav class="navbar navbar-dark sticky-top">
+            <div class="container align-items-center">
+                <a href="index.html" class="navbar-brand">
+                    <img src="assets/images/img-logo.png" alt="" class="brand-img">
+                </a>
+                <form action="" class="form-inline">
+                    <label for="">Search</label>
+                    <div class="search-select d-flex align-items-center">
+                        <i class="fas fa-caret-down"></i>
+                        <select name="" class="text-field">
+                            <option value="all">All</option>
+                        </select>
+                    </div>
+                    <div class="search-keyword d-flex align-items-center">
+                        <input type="text" name="keyword" class="text-field" placeholder="Enter any keyword"> 
+                        <i class="fas fa-search"></i>
+                    </div>
+                </form>
+                <div class="cart">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <p class="cart-count d-flex justify-content-center align-items-center">2</p>
+                        <p class="my-cart">My Cart</p>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    
+                    <div class="floating-cart-wrapper d-flex flex-column align-items-end justify-content-start">
+                        <div class="arrow-up"></div>
+                        <div class="floating-cart">
+                            <p>Shopping Cart</p>
+                            <ul>
+                                <li>
+                                    <div class="floating-item-wrapper d-flex justify-content-start align-items-center mb-2">
+                                        <div class="fc-img-holder d-flex justify-content-center align-items-center m-0" >
+                                            <img class="img-item" src="assets/images/item1-final.png" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column justify-content-center ml-3">
+                                            <p class="m-0">Aqua Therapy</p>
+                                            <p class="mt-2 mb-0 cart-item-price">P 565.00</p>
+                                        </div>    
+                                    </div>
+                                    <hr>
+                                </li>
+                            </ul>
+                            <div class="cart-btn-wrapper d-flex justify-content-lg-between align-content-center mt-3">
+                                <a href="cart.html" id="view-cart-btn" class="purple-outline-btn d-flex justify-content-center align-items-center">VIEW CART</a>
+                                <a href="#" id="checkout-btn" class="purple-btn d-flex justify-content-center align-items-center">CHECKOUT</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <hr>
+            <div class="container py-2">
+                <ul>
+                    <li><a href="">Shop by what you need<span><i class="fas fa-caret-down"></i></span></a></li>
+                    <li><a href="">Categories<span><i class="fas fa-caret-down"></i></span></a></li>
+                    <li><a href="">Today's Deals<span><i class="fas fa-caret-down"></i></span></a></li>
+                    <li><a href="">My Shopping List<span><i class="fas fa-caret-down"></i></span></a></li>
+                </ul>
+                <div class="login-container">
+                    <i class="far fa-user fa-xs"></i>
+                    <a class="login" href="login.html">Login</a>
+                    <p style="margin: 0 10px; display:inline;">|</p>
+                    <a href="#">Sign up</a>
+                </div>
+            </div>
+            <hr>
+        </nav>
+        <!-- main -->
+        <div id="content-wrap">
+            <section class="user-info">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-8 pr-0 mr-0" style="border-right: 1px solid #eae9e9; ">
+                            <div class="container d-flex justify-content-between align-items-center">
+                                <div class="section-heading">
+                                    <h1 class="section-title">Checkout</h1>
+                                    <p>Fill out all the information to proceed to checkout</p>
+                                </div>
+                            </div>
+                            <form id="co-form" href="/checkout.html" method="post" class="co-details">
+                                <div id="co-user-details">
+                                    <div class="container">
+                                        <div class="co-form-wrapper">
+                                            <div class="step-heading d-flex justify-content-start align-items-center">
+                                                <p class="step-count step-count-black d-flex justify-content-center align-items-center">1</p>
+                                                <p class="step-procedure">Your details</p>
+                                            </div>
+        
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="co-input-wrapper">
+                                                        <label class="co-label" for="email">Email address</label>
+                                                        <input class="text-field co-field" type="email" name="email" id="email" placeholder="johndoe@email.com" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="co-input-wrapper">
+                                                        <label class="co-label" for="contact">Contact Number</label>
+                                                        <input maxlength="10" id="contact" class="text-field co-short-field" placeholder="+63xxxxxxxxxx" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="co-input-wrapper">
+                                                        <label class="co-label" for="first-name">First name</label>
+                                                        <input class="text-field co-field" type="text" name="first_name" id="first_name" placeholder="ex. John" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="co-input-wrapper">
+                                                        <label class="co-label" for="last-name">Last name</label>
+                                                        <input class="text-field co-field" type="text" name="last_name" id="last_name" placeholder="ex. Doe" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <p class="step-procedure co-sub-header">Delivery Address</p>
+        
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="co-input-wrapper">
+                                                        <label class="co-label" for="address">Address</label>
+                                                        <input class="text-field co-field" type="text" name="address" id="address" placeholder="ex. Glory Subdivision, Looc" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="co-input-wrapper">
+                                                        <label class="co-label" for="city">City</label>
+                                                        <input class="text-field co-field" type="text" name="city" id="city" placeholder="Lapu-Lapu" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="co-input-wrapper">
+                                                        <label class="co-label" for="province">Province</label>
+                                                        <input class="text-field co-field" type="text" name="province" id="province" placeholder="Cebu" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="co-input-wrapper">
+                                                        <label class="co-label" for="country">Country</label>
+                                                        <input class="text-field co-field" type="text" name="country" id="country" placeholder="Philippines" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="co-input-wrapper">
+                                                        <label class="co-label" for="postal">Postal Code</label>
+                                                        <input class="text-field co-short-field" type="text" name="postal" id="postal" placeholder="6015" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <p class="step-procedure co-sub-header">Billing Address</p>
+        
+                                            <div class="co-checkbox-wrapper d-flex justify-content-start align-items-center">
+                                                <input type="checkbox" name="same-as-delivery" id="same-as-delivery">
+                                                <p>Same as Delivery Address</p>
+                                            </div>
+        
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="co-input-wrapper">
+                                                        <label class="co-label" for="bill-address">Address</label>
+                                                        <input class="text-field co-field" type="text" name="bill-address" id="bill-address" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="co-input-wrapper">
+                                                        <label class="co-label" for="bill-city">City</label>
+                                                        <input class="text-field co-field" type="bill-city" name="bill-city" id="bill-city" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="co-input-wrapper">
+                                                        <label class="co-label" for="bill-province">Province</label>
+                                                        <input class="text-field co-field" type="text" name="bill-province" id="bill-province" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="co-input-wrapper">
+                                                        <label class="co-label" for="bill-country">Country</label>
+                                                        <input class="text-field co-field" type="text" name="bill-country" id="bill-country" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="co-input-wrapper">
+                                                        <label class="co-label" for="bill-postal">Postal Code</label>
+                                                        <input class="text-field co-short-field" type="text" name="bill-postal" id="bill-postal" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="co-hr">
+                                </div>
+                               
+                                <div id="co-terms">
+                                    <div class="container">
+                                        <div class="co-form-wrapper terms-wrapper">
+                                            <div class="co-checkbox-wrapper d-flex justify-content-start align-items-center">
+                                                <input type="checkbox" name="check-terms" id="" required>
+                                                <p class="">I understand and agree the <span><a href="">Terms and Conditions</a></span></p>
+                                            </div>
+                                            <button id="co-continue-btn" class="purple-btn d-flex justify-content-center align-items-center">CONTINUE</button>
+                                        </div>
+                                    </div>
+                                    <hr class="co-hr">
+                                </div>
+                                
+                                <div id="co-user-details-suc">
+                                    <div class="container ">
+                                        <div class="co-form-wrapper">
+                                            <div class="step-heading d-flex justify-content-between align-items-center">
+                                                <div class="d-flex justify-content-start align-items-center">
+                                                    <p class="step-count step-count-green d-flex justify-content-center align-items-center"><i class="fas fa-check"></i></p>
+                                                    <p class="step-procedure">Your details</p>
+                                                </div>
+                                                <p class="edit-summary">Edit</p>
+                                            </div>
+                                            <p class="small-p mb-2">Email address</p>
+                                            <p class="text-bold final-emai">john.smith@email.com</p>
+                                            <div class="row co-user-details-final py-3">
+                                                <div class="col-lg-6">
+                                                    <p class="small-p mb-2">Delivery Address</p>
+                                                    <p class="mb-0 text-bold final-name">Mr.John smith</p>
+                                                    <p class="mb-0 text-bold final-contact">+639192283027</p>
+                                                    <p id="final-address" class="mb-0 text-bold">107 J. Hermose Ave.Pasig City,</p>
+
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <p class="small-p mb-2">Billing Address</p>
+                                                    <p class="mb-0 text-bold final-name">Mr. John Smith</p>
+                                                    <p class="mb-0 text-bold final-contact">+639192283027</p>
+                                                    <p id="final-bill-address" class="mb-0 text-bold">Pandi Bulacan, PH 304 Pandi Bulacan, PH 304 Pandi Bulacan, PH 304</p>
+                                                    <!-- <p class="mb-0 text-bold">12 J. Bernardo St. Poblacion</p>
+                                                    <p class="mb-0 text-bold">Pandi Bulacan, PH 304</p> -->
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="co-hr">
+                                </div>  
+
+<!----------------------------- Step 2 Payment ----------------------------->
+                                <div id="co-payment-pending">
+                                    <div class="container">
+                                        <div class="step-pending-heading d-flex justify-content-start align-items-center">
+                                            <p class="step-count step-count-pending d-flex justify-content-center align-items-center">2</p>
+                                            <p class="step-pending-procedure">Payment</p>
+                                        </div>
+                                    </div>
+                                    <hr class="co-hr">
+                                </div>
+
+                                <div id="co-payment">
+                                    <div class="container">
+                                        <div class="step-heading d-flex justify-content-start align-items-center">
+                                            <p class="step-count step-count-black d-flex justify-content-center align-items-center">2</p>
+                                            <p class="step-procedure">Payment</p>
+                                        </div>
+                                        <div class="co-form-wrapper pb-5">
+                                            <div class="card-wrapper-top px-3">
+                                                <div class="d-flex justify-content-start align-items-center">
+                                                    <p id="credit-debit" class="mb-0 py-2 px-3 small-p text-dark text-bold">Credit/Debit</p>
+                                                    <p class="mb-0 py-2 px-3 small-p text-dark text-bold">Cash-on-Delivery</p>
+                                                    <p class="mb-0 py-2 px-3 small-p text-dark text-bold">Paypal</p>
+                                                </div>
+                                            </div>
+                                            <div class="card-wrapper-bottom p-4">
+                                                <div class="row">
+                                                    <div class="col-lg-8">
+                                                        <p class="co-label">Card Number</p>
+                                                        <input type="text" maxlength="19" name="cardNumber" id="cardNumber" class="text-field co-field" placeholder="xxxx-xxxx-xxxx-5679" >
+                                                    </div>
+                                                    <div class="col-lg-4 d-flex justify-content-end align-items-end pb-1">
+                                                        <img class="payment-img" src="assets/images/mastercard.png" alt="">
+                                                        <img class="payment-img" src="assets/images/visa.png" alt="">
+                                                        <img class="payment-img" src="assets/images/mastercard.png" alt="">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="row mt-3">
+                                                    <div class="col-lg-2">
+                                                        <p class="co-label">Expiry</p>
+                                                        <input type="text" maxlength="5" name="expiry" id="expiry" class="text-field co-field" placeholder="11/17" >
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p class="co-label">CVC</p>
+                                                        <input type="text" maxlength="3" name="cvc" id="cvc" class="text-field co-field" placeholder="xxx" > 
+                                                    </div>
+                                                </div>
+
+                                                <button id="make-payment" class="purple-btn d-flex justify-content-center align-items-center">MAKE PAYMENT</button>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="co-hr">
+                                </div>
+                                
+                                <div id="co-payment-suc">
+                                    <div class="container">
+                                        <div class="step-heading d-flex justify-content-start align-items-center">
+                                            <p class="step-count step-count-green d-flex justify-content-center align-items-center">2</p>
+                                            <p class="step-procedure">Payment</p>
+                                        </div>
+                                        <div class="co-form-wrapper pb-5">
+                                            <p class="small-p">Card Number</p>
+                                            <p class="mb-0 text-bold">Master Card</p>
+                                            <p id="final-card-number" class="mb-0 text-bold">xxxx xxxx-xxxx-xxxx-5679</p>
+                                            <p id="final-expiry" class="mb-0 text-bold">11/17</p>
+                                        </div>
+                                    </div>
+                                    <hr class="co-hr">
+                                </div>
+
+<!----------------------------- Step 3 Order Complete ----------------------------->
+                                <div id="co-confirmation-pending">
+                                    <div class="container">
+                                        <div class="step-pending-heading d-flex justify-content-start align-items-center">
+                                            <p class="step-count step-count-pending d-flex justify-content-center align-items-center">3</p>
+                                            <p class="step-pending-procedure">Order Complete</p>
+                                        </div>
+                                    </div>
+                                    <hr class="co-hr">
+                                </div>
+                                
+                                <div id="co-confirmation">
+                                    <div class="container">
+                                        <div class="step-heading d-flex justify-content-start align-items-center">
+                                            <p class="step-count step-count-black d-flex justify-content-center align-items-center">3</p>
+                                            <p class="step-procedure">Confirmation</p>
+                                        </div>
+                                        <div class="co-form-wrapper pb-5">
+                                            <p class="small-p">Order confirmation number:</p>
+                                            <h1 class="text-black mb-3">3049-3092</h1>
+                                            <p class="mb-4">An email acknowledgement with your order <br> details will be sent shortly to <span class="text-underline final-email">john.smith@email.com</span></p>
+                                            <button id="continue-shopping" class="purple-outline-btn text-black">CONTINUE SHOPPING</button>
+                                        </div>
+                                    </div>
+                                    <hr class="co-hr">
+                                </div>
+
+                                <div id="co-confirmation-suc">
+                                    <div class="container">
+                                        <div class="step-pending-heading d-flex justify-content-start align-items-center">
+                                            <p class="step-count step-count-green d-flex justify-content-center align-items-center">3</p>
+                                            <p class="step-procedure">Confirmation</p>
+                                        </div>
+                                    </div>
+                                    <hr class="co-hr">
+                                </div>
+
+<!----------------------------- Checkout Footer ----------------------------->
+                                <div class="container">
+                                    <div class="payment-support">
+                                        <p>Supported payment types:</p>
+                                        <div class="d-flex justify-content-start align-items-center my-3">
+                                            <img class="payment-img" src="assets/images/mastercard.png" alt="">
+                                            <img class="payment-img" src="assets/images/visa.png" alt="">
+                                            <img class="payment-img" src="assets/images/mastercard.png" alt="">
+                                            <img class="payment-img" src="assets/images/paypal.png" alt="">
+                                            <img class="payment-img" src="assets/images/visa.png" alt="">
+                                        </div>
+                                        <p>Any questions, call 1300 3362 603 <span><a href="">What is your return policy? </a></span>
+                                            <span><a href="">When can I expect my order?</a></span><br>Copyright&copy; 1995-2017 Samsung all rights reserved. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-4 pl-0">
+                            <div class="checkout-summary">
+                                <div class="d-flex justify-content-between align-items-center">   
+                                    <p class="checkout-heading">Summary</p>
+                                    <p class="edit-summary">Edit</p>
+                                </div>
+                                <div id="summary-div" class="py-2">
+                                    <div class="d-flex justify-content-start align-content-center mb-3">
+                                        <div class="d-flex justify-content-center align-self-center mr-3 ">
+                                            <img src="assets/images/item1-final.png" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <p class="m-0">Aqua Therapy</p>
+                                            <p class="mt-2 mb-0 cart-item-price">P 565.00</p>
+                                        </div>    
+                                    </div>
+                                    <div class="d-flex justify-content-start align-content-center mb-3">
+                                        <div class="d-flex justify-content-center align-self-center mr-3 ">
+                                            <img src="assets/images/item1-final.png" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <p class="m-0">Aqua Therapy</p>
+                                            <p class="mt-2 mb-0 cart-item-price">P 565.00</p>
+                                        </div>    
+                                    </div>
+                                </div>
+                                <hr>
+                                <p id="promo-msg">20% off all products when you order during November</p>
+                                <div class="subtotal-wrapper d-flex justify-content-between align-items-center">
+                                    <p>Subtotal</p>
+                                    <p id="subtotal">P 33,264.00</p>
+                                </div>
+                                <div class="shipping-wrapper d-flex justify-content-between align-items-center">
+                                    <p>Shipping</p>
+                                    <p id="shipping">P 2,500.00</p>
+                                </div>
+                                <div class="total-wrapper d-flex justify-content-between align-items-center">
+                                    <p>Total</p>
+                                    <p id="total">P 2,500.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+#content-wrap {
+    overflow: auto;
+    padding-bottom:  10px;  
+}
+
+#credit-debit {
+    border-bottom: 3px solid #9c39d6;
+}
+
+#make-payment {
+    height: 27px;
+    width: 150px;
+    font-size: .6rem;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+#continue-shopping {
+    border: 2px solid #9c39d6;
+    font-size: .75rem;
+    height: 30px;
+    width: 200px;
+}
+
+.co-form-wrapper {
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+
+.card-wrapper-top {
+    border: 1px solid #eae9e9;
+}
+
+.card-wrapper-bottom {
+    border: 1px solid #eae9e9;
+    border-top: 0;
+}
+
+.co-hr {
+    width: 100%;
+    height: 2px;
+    margin: 0;
+}
+
+/* ================== Step Headers ===================*/
+
+.step-heading {
+    margin: 20px 0 45px 0;
+}
+
+.step-count {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1px;
+    padding: 0;
+    margin: 0 20px 0 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.step-count-black {
+    background-color: black;
+    color: white;
+}
+
+.step-count-green {
+    color: #66cc7c;
+    background-color: white;
+    border: 3px solid #66cc7c;
+}
+
+.step-count-pending {
+    color: #9fa4ad;
+    background-color: white;
+    border: 3px solid #9fa4ad;
+}
+
+.step-procedure {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: black;
+    margin: 0;
+    line-height: 1px;
+}
+
+.step-pending-heading {
+    margin: 30px 0 30px 0;
+}
+
+
+.step-pending-procedure {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #9fa4ad;
+    margin: 0;
+    line-height: 1px;
+}
+
+/* ==================== Textfields ====================*/
+
+.co-input-wrapper {
+    margin-bottom: 20px;
+}
+
+.co-input-wrapper input[type="text"]:focus,
+.co-input-wrapper input[type="email"]:focus {
+    padding-left: 18px; 
+}
+
+.co-field {
+    width: 100%;
+    height: 40px;
+    padding-left: 20px;
+}
+
+.co-short-field {
+    width: 65%;
+    height: 40px;
+    padding-left: 20px;
+}
+
+.co-label {
+    margin: 0 0 7px 0;
+    font-size: .75rem;
+    color:black;
+    display: block;
+    margin-left: 17px;
+    font-weight: 500;
+}
+
+/*==================== Checkbox wrapper ===============*/
+
+.co-sub-header  {
+    margin: 40px 0 45px 17px;
+}
+
+.co-checkbox-wrapper{
+    margin:5px 10px 25px 17px;
+}
+
+.co-checkbox-wrapper p{
+    margin: 0 0 0 10px;
+    font-size: .85rem;
+    color: #9fa4ad;
+}
+
+.co-checkbox-wrapper input {
+    width: 20px;
+    height: 20px;
+}
+
+/* Footer */
+.payment-support {
+    font-size: .70rem;
+    color: #9fa4ad;
+    padding: 20px 0;
+}
+
+.payment-support p {
+    margin: 0;
+}
+
+.payment-img {
+    width: 50px;
+    margin-right: 5px;
+}
+
+
+/* Summary */
+.edit-summary {
+    margin: 0;
+    color: #9fa4ad;
+    
+    cursor: pointer;
+}
+
+.edit-summary:hover {
+    color: black;
+}
+
+.checkout-summary img {
+    width: 70px;
+}
+
+#co-continue-btn {
+    width: 200px;
+    height: 30px;
+    margin-left: 17px;
+}
+
+.terms-wrapper {
+    margin: 30px 0 30px 0;
+}

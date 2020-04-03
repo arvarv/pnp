@@ -1,0 +1,142 @@
+/* Header */
+header {
+    margin-top: 0px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#header-btn {
+    width: 170px;
+    height: 40px;
+    font-size: .85rem;
+}
+
+#header-btn:focus{
+    outline: none;
+}
+
+.jumbotron {
+    background-image: url("../images/header-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -200px;
+    color: white;
+    height: 400px;
+    padding: 100px 100px;
+    margin-bottom: 12px;
+}
+
+.jumbotron h1 {
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-shadow: 0px 2px 2px rgba(5,0,0,0.51);
+}
+
+.jumbotron p {
+    font-weight: 400;
+    font-size: 1rem;
+    text-shadow: 0px 2px 2px rgba(5,0,0,0.51);
+}
+
+.jumbotron a {
+    font-size: .85rem;
+    width: 180px;
+    height: 50px;
+    -webkit-box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.2);
+    box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.2);
+}
+
+/* Categories */
+.categories {
+    margin-bottom: 40px;
+}
+.categories ul {
+    margin: 0;
+    height: 35px;
+}
+.categories li {
+    margin: 0 15px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.tab-clicked {
+    color: black;
+    border-bottom: 3px solid #9c39d6;
+}
+
+.tab-unclicked {
+    color: #9fa4ad;
+    font-weight: 400;
+}
+
+.tab-item-wrapper {
+    display: inline-block;
+    width: 150px;
+    height: 35px;
+    text-align: center;
+}
+
+.tab-item-wrapper a:hover{
+    color: black;
+}
+
+.all-category-btn:hover {
+    color:#9c39d6;
+}
+
+.category-item {
+    padding: 20px 20px 0 20px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    height: 300px;
+}
+
+.category-item h2 {
+    font-weight: 900;
+    margin: 0 0 15px 0;
+    line-height: 1;
+}
+
+.category-item p {
+    color: #9fa4ad;
+}
+
+.category-img {
+    margin-right: -20px;
+    text-align: right;
+}
+
+.category-img img {
+    width:65%;
+    max-width: 200px;
+}
+
+/* Deals */
+.deals {
+    padding: 40px 0;
+    background: #f0f2f4;
+}
+
+.deals h1 {
+    margin-bottom: 20px;
+}
+
+.deals img {
+    width: 48%;
+}
+
+/* Trending */
+.trending {
+    padding-bottom: 65px;
+}
+
+
+/* Common designs */
+.outline-btn {
+    font-size: .75rem;
+    font-weight: 500;
+    padding: 7px 20px;
+    border: 2px solid #9c39d6;
+}

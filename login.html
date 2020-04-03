@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick n' Pay</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">   <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <!-- Custom styles -->
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/0f0c45fea2.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     <!-- jQuery -->
+     <script src="assets/js/jquery.js"></script>
+</head>
+<body>
+    
+    <!-- container -->
+    <div id="page-container"> 
+        <nav class="navbar navbar-dark sticky-top">
+            <div class="container align-items-center">
+                <a href="index.html" class="navbar-brand">
+                    <img src="assets/images/img-logo.png" alt="" class="brand-img">
+                </a>
+                <form action="" class="form-inline">
+                    <label for="">Search</label>
+                    <div class="search-select d-flex align-items-center">
+                        <i class="fas fa-caret-down"></i>
+                        <select name="" class="text-field">
+                            <option value="all">All</option>
+                        </select>
+                    </div>
+                    <div class="search-keyword d-flex align-items-center">
+                        <input type="text" name="keyword" class="text-field" placeholder="Enter any keyword"> 
+                        <i class="fas fa-search"></i>
+                    </div>
+                </form>
+                <div class="cart">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <p class="cart-count d-flex justify-content-center align-items-center">2</p>
+                        <p class="my-cart">My Cart</p>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    
+                    <div class="floating-cart-wrapper d-flex flex-column align-items-end justify-content-start">
+                        <div class="arrow-up"></div>
+                        <div class="floating-cart">
+                            <p>Shopping Cart</p>
+                            <ul>
+                                <li>
+                                    <div class="floating-item-wrapper d-flex justify-content-start align-items-center mb-2">
+                                        <div class="fc-img-holder d-flex justify-content-center align-items-center m-0" >
+                                            <img class="img-item" src="assets/images/item1-final.png" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column justify-content-center ml-3">
+                                            <p class="m-0">Aqua Therapy</p>
+                                            <p class="mt-2 mb-0 cart-item-price">P 565.00</p>
+                                        </div>    
+                                    </div>
+                                    <hr>
+                                </li>
+                            </ul>
+                            <div class="cart-btn-wrapper d-flex justify-content-lg-between align-content-center mt-3">
+                                <a href="cart.html" id="view-cart-btn" class="purple-outline-btn d-flex justify-content-center align-items-center">VIEW CART</a>
+                                <a href="checkout.html" id="checkout-btn" class="purple-btn d-flex justify-content-center align-items-center">CHECKOUT</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <hr>
+            <div class="container py-2">
+                <ul>
+                    <li><a href="#">Shop by what you need<span><i class="fas fa-caret-down"></i></span></a></li>
+                    <li><a href="#">Categories<span><i class="fas fa-caret-down"></i></span></a></li>
+                    <li><a href="#">Today's Deals<span><i class="fas fa-caret-down"></i></span></a></li>
+                    <li><a href="#">My Shopping List<span><i class="fas fa-caret-down"></i></span></a></li>
+                </ul>
+                <div class="login-container">
+                    <i class="far fa-user fa-xs"></i>
+                    <a class="login" href="#">Login</a>
+                    <p style="margin: 0 10px; display:inline;">|</p>
+                    <a href="#">Sign up</a>
+                </div>
+            </div>
+            <hr>
+        </nav>
+        <!-- main -->
+        <div id="content-wrap">
+            <section class="login">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <div class="section-heading">
+                        <h1 class="section-title">Login to checkout</h1>
+                        <p>You need to login your account in order to checkout.</p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <form id="login-form" action="/index.html" method="post">
+                                <p for="email">Email address</p>
+                                <div class="login-form d-flex align-items-center">
+                                    <i class="far fa-user fa-xs"></i>
+                                    <input id="email" type="email" name="email" placeholder="Your email address" required>
+                                </div>
+                                <p for="email">Password</p>
+                                <div class="login-form d-flex align-items-center">
+                                    <i class="fas fa-unlock fa-xs"></i>
+                                    <input id="password" type="password" name="password" placeholder="Your password" required>
+                                </div>
+                                <div class="login-btn-wrapper d-flex justify-content-between align-items-center">
+                                    <button id="login-btn" type="submit" class="purple-btn d-flex justify-content-center align-items-center">LOGIN</button>
+                                    <a href="#" class="forgot-btn">Forgot password</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </section>
+        
+            <section class="registration">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <div class="section-heading">
+                        <h1 class="section-title">Register for an account</h1>
+                        <p>Create an account to successfully checkout your cart.</p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="login-btn-wrapper d-flex justify-content-between align-items-center">
+                                <button class="signup-btn d-flex justify-content-center align-items-center">SIGN UP</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <section class="recommendation">
+            <div class="container d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-star fa-2x"></i>
+                    <p id="footer-msg">Get recommendations, deals, tips, updates, promotions and more.</p>
+                </div>
+                <div class="email-input d-flex align-items-center">
+                    <i class="fas fa-envelope fa-lg"></i>
+                    <input type="email" name="" id="" placeholder="Your email address">
+                    <button class="email-signup-btn d-flex justify-content-center align-items-center">SIGN UP</button>
+                </div>
+                
+            </div>
+        </section>
+        <div class="container d-flex justify-content-between align-items-center mt-3 mb-2">
+            <img src="assets/images/img-logo.png" alt="">
+            <div class="d-flex">
+                <div class="circles"> </div>
+                <div class="circles"> </div>
+                <div class="circles"> </div>
+            </div>
+        </div>
+        <div class="container d-flex justify-content-between align-items-center">
+            <p class="footer-link">&copy; Pick & Pay 2020. All Rights Reserved.</p>
+            <ul class="m-0">
+                <li><a class="footer-link" href="#">About Pick & Pay</a></li>
+                <li><a class="footer-link" href="#">Contact Us</a></li>
+                <li><a class="footer-link" href="#">FAQs</a></li>
+                <li><a class="footer-link" href="#">Terms & Conditions</a></li>
+                <li><a class="footer-link" href="#">Privacy Policy</a></li>    
+            </ul>
+        </div>
+    </footer>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/login.js"></script>
+</body>
+</html>

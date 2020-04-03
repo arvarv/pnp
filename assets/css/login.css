@@ -1,0 +1,81 @@
+form p, form input {
+    font-size: .85rem;
+}
+
+form p {
+    margin: 0 0 5px 20px;
+}
+
+#login-btn {
+    width: 50%;
+    height: 35px;
+}
+
+.login hr {
+    margin-top: 30px;
+    width: 75%;
+}
+
+.login-form {
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.login-form input {
+    height: 40px;
+    width: 100%;
+    background: #f2f4fa;
+    border: none;
+    border-radius: 100px;
+    padding-left: 50px;
+    font-size: .85rem;
+}
+
+.login-form input:focus {
+    outline: none;
+    border: 2px solid #9c39d6;
+    padding-left: 48px;
+}
+
+.login-form input::placeholder {
+    color: black;
+}
+
+.login-form i {
+    position: absolute;
+    left: 20px;
+    color: black;
+}
+
+.login-btn-wrapper {
+    padding: 0 20px;
+}
+
+.forgot-btn {
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.forgot-btn:hover {
+    color: #9c39d6;
+}
+
+.registration {
+    margin-bottom: 70px;
+}
+
+.signup-btn {
+    font-size: .75rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    width: 50%;
+    height: 35px;
+    border: 3px solid #9c39d6;
+    color: #9c39d6;
+    background: white;
+}
+
+.signup-btn:hover {
+    color:#9c39d6;
+}

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick n' Pay</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">   <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <!-- Custom styles -->
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/product-list.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/0f0c45fea2.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div id="page-container">
+        <!-- </div> -->
+        <nav class="navbar navbar-dark sticky-top">
+            <div class="container align-items-center">
+                <a href="index.html" class="navbar-brand">
+                    <img src="assets/images/img-logo.png" alt="" class="brand-img">
+                </a>
+                <form action="" class="form-inline">
+                    <label for="">Search</label>
+                    <div class="search-select d-flex align-items-center">
+                        <i class="fas fa-caret-down"></i>
+                        <select name="" class="text-field">
+                            <option value="all">All</option>
+                        </select>
+                    </div>
+                    <div class="search-keyword d-flex align-items-center">
+                        <input type="text" name="keyword" class="text-field" placeholder="Enter any keyword"> 
+                        <i class="fas fa-search"></i>
+                    </div>
+                </form>
+                <div class="cart">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <p class="cart-count d-flex justify-content-center align-items-center">1</p>
+                        <p class="my-cart">My Cart</p>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    
+                    <div class="floating-cart-wrapper d-flex flex-column align-items-end justify-content-start">
+                        <div class="arrow-up"></div>
+                        <div class="floating-cart">
+                            <p>Shopping Cart</p>
+                            <ul>
+                                <li>
+                                    <div class="floating-item-wrapper d-flex justify-content-start align-items-center mb-2">
+                                        <div class="fc-img-holder d-flex justify-content-center align-items-center m-0" >
+                                            <img class="img-item" src="assets/images/item1-final.png" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column justify-content-center ml-3">
+                                            <p class="m-0">Aqua Therapy</p>
+                                            <p class="mt-2 mb-0 cart-item-price">P 565.00</p>
+                                        </div>    
+                                    </div>
+                                    <hr>
+                                </li>
+                            </ul>
+                            <div class="cart-btn-wrapper d-flex justify-content-lg-between align-content-center mt-3">
+                                <a href="cart.html" id="view-cart-btn" class="purple-outline-btn d-flex justify-content-center align-items-center">VIEW CART</a>
+                                <a href="checkout.html" id="checkout-btn" class="purple-btn d-flex justify-content-center align-items-center">CHECKOUT</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <hr>
+            <div class="container py-2">
+                <ul>
+                    <li><a href="#">Shop by what you need<span><i class="fas fa-caret-down"></i></span></a></li>
+                    <li><a href="#">Categories<span><i class="fas fa-caret-down"></i></span></a></li>
+                    <li><a href="#">Today's Deals<span><i class="fas fa-caret-down"></i></span></a></li>
+                    <li><a href="#">My Shopping List<span><i class="fas fa-caret-down"></i></span></a></li>
+                </ul>
+                <div class="login-container">
+                    <i class="far fa-user fa-xs"></i>
+                    <a class="login" href="login.html">Login</a>
+                    <p style="margin: 0 10px; display:inline;">|</p>
+                    <a href="#">Sign up</a>
+                </div>
+            </div>
+            <hr>
+        </nav>
+        <div id="content-wrap">
+            <header class="header">
+                <div class="jumbotron rounded-0 d-flex flex-column justify-content-center">
+                    <div class="container">
+                        <h1>Groceries</h1>
+                        <p>Farm fresh goods right at your doorstep</p>
+                    </div>
+                </div>
+            </header>
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center my-4">
+                    <p class="xs-p m-0">
+                        <span class="text-underline">Shop</span>
+                        / <span class="text-underline">Products</span>
+                        / <span class="text-strong text-dark">Groceries</span>
+                    </p>
+                    <p class="xs-p m-0">Sort by: 
+                        <span class="text-strong text-dark mx-2">Price Highest</span>
+                        <span><i class="fas fa-caret-down"></i></span>
+                    </p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3">
+                        <p class="small-p text-black text-dark">Categories</p>
+                        
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <input class="pl-checkbox" type="checkbox" name="" id="">
+                            <p class="xs-p text-bold text-dark my-0 ml-2">All Products</p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <input class="pl-checkbox" type="checkbox" name="" id="">
+                            <p class="xs-p text-bold text-dark my-0 ml-2">Fresh Meat</p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <input class="pl-checkbox" type="checkbox" name="" id="">
+                            <p class="xs-p text-bold text-dark my-0 ml-2">Fresh Seafood</p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <input class="pl-checkbox" type="checkbox" name="" id="">
+                            <p class="xs-p text-bold text-dark my-0 ml-2">Fresh Fruits</p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <input class="pl-checkbox" type="checkbox" name="" id="">
+                            <p class="xs-p text-bold text-dark my-0 ml-2">Fresh Vegetables</p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <input class="pl-checkbox" type="checkbox" name="" id="">
+                            <p class="xs-p text-bold text-dark my-0 ml-2">Dairy, Eggs & Chilled Food</p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <input class="pl-checkbox" type="checkbox" name="" id="">
+                            <p class="xs-p text-bold text-dark my-0 ml-2">Bakery</p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <input class="pl-checkbox" type="checkbox" name="" id="">
+                            <p class="xs-p text-bold text-dark my-0 ml-2">Canned & Packaged Food</p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <input class="pl-checkbox" type="checkbox" name="" id="">
+                            <p class="xs-p text-bold text-dark my-0 ml-2">Health & Wellness</p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <input class="pl-checkbox" type="checkbox" name="" id="">
+                            <p class="xs-p text-bold text-dark my-0 ml-2">Snacks & Sweets</p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <input class="pl-checkbox" type="checkbox" name="" id="">
+                            <p class="xs-p text-bold text-dark my-0 ml-2">Babies</p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <input class="pl-checkbox" type="checkbox" name="" id="">
+                            <p class="xs-p text-bold text-dark my-0 ml-2">Frozen Food</p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <input class="pl-checkbox" type="checkbox" name="" id="">
+                            <p class="xs-p text-bold text-dark my-0 ml-2">Drinks</p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <input class="pl-checkbox" type="checkbox" name="" id="">
+                            <p class="xs-p text-bold text-dark my-0 ml-2">Alcohol</p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center mb-3">
+                            <input class="pl-checkbox" type="checkbox" name="" id="">
+                            <p class="xs-p text-bold text-dark my-0 ml-2">Health & Beauty</p>
+                        </div>
+                        
+                        <hr>
+
+                        <div class="d-flex justify-content-start align-items-center mt-3 mb-2">
+                            <input class="pl-checkbox" type="checkbox" name="" id="">
+                            <p class="xs-p text-bold text-dark my-0 ml-2"><span class="mr-2 text-primary"><i class="fas fa-history"></i></span>Same-Day Delivery</p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <input class="pl-checkbox" type="checkbox" name="" id="">
+                            <p class="xs-p text-bold text-dark my-0 ml-2"><span class="mr-2 text-danger"><i class="fas fa-tag"></i></span>Deals</p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <input class="pl-checkbox" type="checkbox" name="" id="">
+                            <p class="xs-p text-bold text-dark my-0 ml-2"><span class="mr-2 text-purple"><i class="far fa-heart"></i></span>Most Liked</p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <input class="pl-checkbox" type="checkbox" name="" id="">
+                            <p class="xs-p text-bold text-dark my-0 ml-2"><span class="mr-2"><i class="fas fa-cube"></i></span>Bulk Orders</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-4 p-0 m-0" data-toggle="modal" data-target="#pl-modal" data-toggle="modal" data-target="#pl-modal">
+                                <div class="card-wrapper pt-0 px-3 pb-3">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body d-flex flex-column justify-content-between m-0 p-0">
+                                            <div>
+                                                <div class="img-holder d-flex align-items-center justify-content-center">
+                                                    <img src="assets/images/item2-final.png" alt="" class="img-item">
+                                                </div>
+                                                <div class="trending-deal-item">
+                                                    <h5 class="card-title mb-2">Bourbon 150mg</h5>
+                                                    <p class="m-0"><span><i class="far fa-heart fa-md"></i></span>142 people like this</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-between">
+                                                <div class="trending-deal-tag">
+                                                    <p class="trending-deal-discount mx-0 my-2"></p>
+                                                    <p class="trending-deal-price m-0">P 325.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 p-0 m-0" data-toggle="modal" data-target="#pl-modal">
+                                <div class="card-wrapper pt-0 px-3 pb-3">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body d-flex flex-column justify-content-between m-0 p-0">
+                                            <div>
+                                                <div class="img-holder d-flex align-items-center justify-content-center">
+                                                    <img src="assets/images/item4-final.png" alt="" class="img-item">
+                                                </div>
+                                                <div class="trending-deal-item">
+                                                    <h5 class="card-title mb-2">Forever Royal Jelly 60 Tablets</h5>
+                                                    <p class="m-0"><span><i class="far fa-heart fa-md"></i></span>142 people like this</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-between">
+                                                <div class="trending-deal-tag">
+                                                    <p class="trending-deal-discount mx-0 my-2"></p>
+                                                    <p class="trending-deal-price m-0">P 750.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 p-0 m-0" data-toggle="modal" data-target="#pl-modal">
+                                <div class="card-wrapper pt-0 px-3 pb-3">
+                                    <div class="card shadow-sm">
+                                        <p class="bg-danger text-light trending-deal-btn">DEAL</p>
+                                        <div class="card-body d-flex flex-column justify-content-between m-0 p-0">
+                                            <div>
+                                                <div class="img-holder d-flex align-items-center justify-content-center">
+                                                    <img src="assets/images/item1-final.png" alt="" class="img-item">
+                                                </div>
+                                                <div class="trending-deal-item">
+                                                    <h5 class="card-title mb-2">Aqua Therapy</h5>
+                                                    <p class="m-0"><span><i class="far fa-heart fa-md"></i></span>142 people like this</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-between">
+                                                <div class="trending-deal-tag">
+                                                    <p class="trending-deal-discount mx-0 my-2">21% off</p>
+                                                    <p class="trending-deal-price m-0">P 565.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4 p-0 m-0" data-toggle="modal" data-target="#pl-modal">
+                                <div class="card-wrapper p-3">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body d-flex flex-column justify-content-between m-0 p-0">
+                                            <p class="bg-danger text-light trending-deal-btn">DEAL</p>
+                                            <div>
+                                                <div class="img-holder d-flex align-items-center justify-content-center">
+                                                    <img src="assets/images/item3-final.png" alt="" class="img-item">
+                                                </div>
+                                                <div class="trending-deal-item">
+                                                    <h5 class="card-title mb-2">Holle Organic Growing-up Milk 3</h5>
+                                                    <p class="m-0"><span><i class="far fa-heart fa-md"></i></span>142 people like this</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-between">
+                                                <div class="trending-deal-tag">
+                                                    <p class="trending-deal-discount mx-0 my-2">12% off</p>
+                                                    <p class="trending-deal-price m-0">P 265.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 p-0 m-0" data-toggle="modal" data-target="#pl-modal">
+                                <div class="card-wrapper p-3">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body d-flex flex-column justify-content-between m-0 p-0">
+                                            <div>
+                                                <div class="img-holder d-flex align-items-center justify-content-center">
+                                                    <img src="assets/images/item2-final.png" alt="" class="img-item">
+                                                </div>
+                                                <div class="trending-deal-item">
+                                                    <h5 class="card-title mb-2">Bourbon 150mg</h5>
+                                                    <p class="m-0"><span><i class="far fa-heart fa-md"></i></span>142 people like this</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-between">
+                                                <div class="trending-deal-tag">
+                                                    <p class="trending-deal-discount mx-0 my-2"></p>
+                                                    <p class="trending-deal-price m-0">P 325.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 p-0 m-0" data-toggle="modal" data-target="#pl-modal">
+                                <div class="card-wrapper p-3">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body d-flex flex-column justify-content-between m-0 p-0">
+                                            <div>
+                                                <div class="img-holder d-flex align-items-center justify-content-center">
+                                                    <img src="assets/images/item4-final.png" alt="" class="img-item">
+                                                </div>
+                                                <div class="trending-deal-item">
+                                                    <h5 class="card-title mb-2">Forever Royal Jelly 60 Tablets</h5>
+                                                    <p class="m-0"><span><i class="far fa-heart fa-md"></i></span>142 people like this</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-between">
+                                                <div class="trending-deal-tag">
+                                                    <p class="trending-deal-discount mx-0 my-2"></p>
+                                                    <p class="trending-deal-price m-0">P 750.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 p-0 m-0" data-toggle="modal" data-target="#pl-modal">
+                                <div class="card-wrapper p-3">
+                                    <div class="card shadow-sm">
+                                        <p class="bg-danger text-light trending-deal-btn">DEAL</p>
+                                        <div class="card-body d-flex flex-column justify-content-between m-0 p-0">
+                                            <div>
+                                                <div class="img-holder d-flex align-items-center justify-content-center">
+                                                    <img src="assets/images/item1-final.png" alt="" class="img-item">
+                                                </div>
+                                                <div class="trending-deal-item">
+                                                    <h5 class="card-title mb-2">Aqua Therapy</h5>
+                                                    <p class="m-0"><span><i class="far fa-heart fa-md"></i></span>142 people like this</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-between">
+                                                <div class="trending-deal-tag">
+                                                    <p class="trending-deal-discount mx-0 my-2">21% off</p>
+                                                    <p class="trending-deal-price m-0">P 565.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 p-0 m-0" data-toggle="modal" data-target="#pl-modal">
+                                <div class="card-wrapper p-3">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body d-flex flex-column justify-content-between m-0 p-0">
+                                            <div>
+                                                <div class="img-holder d-flex align-items-center justify-content-center">
+                                                    <img src="assets/images/item4-final.png" alt="" class="img-item">
+                                                </div>
+                                                <div class="trending-deal-item">
+                                                    <h5 class="card-title mb-2">Forever Royal Jelly 60 Tablets</h5>
+                                                    <p class="m-0"><span><i class="far fa-heart fa-md"></i></span>142 people like this</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-between">
+                                                <div class="trending-deal-tag">
+                                                    <p class="trending-deal-discount mx-0 my-2"></p>
+                                                    <p class="trending-deal-price m-0">P 750.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 p-0 m-0" data-toggle="modal" data-target="#pl-modal">
+                                <div class="card-wrapper p-3">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body d-flex flex-column justify-content-between m-0 p-0">
+                                            <p class="bg-danger text-light trending-deal-btn">DEAL</p>
+                                            <div>
+                                                <div class="img-holder d-flex align-items-center justify-content-center">
+                                                    <img src="assets/images/item3-final.png" alt="" class="img-item">
+                                                </div>
+                                                <div class="trending-deal-item">
+                                                    <h5 class="card-title mb-2">Holle Organic Growing-up Milk 3</h5>
+                                                    <p class="m-0"><span><i class="far fa-heart fa-md"></i></span>142 people like this</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-between">
+                                                <div class="trending-deal-tag">
+                                                    <p class="trending-deal-discount mx-0 my-2">12% off</p>
+                                                    <p class="trending-deal-price m-0">P 265.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            
+                            <div class="col-lg-4 offset-lg-4">
+                                <button id="load-more-btn" class="purple-outline-btn">LOAD MORE PRODUCTS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="pl-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="modal-img-wrap py-3 px-0">
+                                                <button class="purple-outline-btn d-flex align-self-start" id="modal-close"  data-toggle="modal" data-target="#pl-modal">Close</button>
+                                                <img class="product-img" src="assets/images/item1-final.png" alt="">
+                                                <div><p> </p></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="py-3">
+                                                <h2 id="pl-modal-title" class="text-strong">Aqua Therapy</h2>
+                                                <p class="xs-p my-4">Product Info</p>
+                                                <p class="product-info small-p text-dark m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus ipsam ipsa perferendis quae quas provident animi facere corporis fugiat deserunt?</p>
+                                                <div class="d-flex justify-content-start align-items-center my-3">
+                                                    <p class="xs-p my-0 mr-3">Quantity</p>
+                                                    <div class="item-quantity d-flex justify-content-sm-start align-items-center">
+                                                        <button class="minus-btn d-flex justify-content-center align-items-center">
+                                                            <span><i class="fas fa-minus"></i></span>
+                                                        </button>
+                                                        <p class="item-count">0</p>
+                                                        <button class="plus-btn d-flex justify-content-center align-items-center">
+                                                            <span><i class="fas fa-plus"></i></span>
+                                                        </button>
+                                                    </div>
+                                                </div>   
+                                                <h2 id="pl-modal-price" class="text-bold mb-4">P 235.00</h2>
+                                                <div class="d-flex justify-content-start align-items-center">
+                                                    <button id="add-to-cart-btn" class="purple-btn mr-4">ADD TO CART</button>
+                                                    <p class="small-p text-dark my-0 mr-3">Like this product?</p>
+                                                    <p class="xs-p m-0 text-purple text-black "><span><i class="far fa-heart mr-1"></i></span>124</p>
+                                                </div>
+                                                <hr class="my-4">
+                                                <p class="xs-p mb-3">20% of all products whean you order during November.</p>
+                                                <p class="small-p text-dark m-0 "><span class="mr-2 text-primary"><i class="fas fa-history"></i></span>Same-Day Delivery</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <section class="recommendation">
+            <div class="container d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-star fa-2x"></i>
+                    <p id="footer-msg">Get recommendations, deals, tips, updates, promotions and more.</p>
+                </div>
+                <div class="email-input d-flex align-items-center">
+                    <i class="fas fa-envelope fa-lg"></i>
+                    <input type="email" name="" id="" placeholder="Your email address">
+                    <button class="email-signup-btn d-flex justify-content-center align-items-center">SIGN UP</button>
+                </div>
+                
+            </div>
+        </section>
+        <div class="container d-flex justify-content-between align-items-center mt-3 mb-2">
+            <img src="assets/images/img-logo.png" alt="">
+            <div class="d-flex">
+                <div class="circles"> </div>
+                <div class="circles"> </div>
+                <div class="circles"> </div>
+            </div>
+        </div>
+        <div class="container d-flex justify-content-between align-items-center">
+            <p class="footer-link">&copy; Pick & Pay 2020. All Rights Reserved.</p>
+            <ul class="m-0">
+                <li><a class="footer-link" href="#">About Pick & Pay</a></li>
+                <li><a class="footer-link" href="#">Contact Us</a></li>
+                <li><a class="footer-link" href="#">FAQs</a></li>
+                <li><a class="footer-link" href="#">Terms & Conditions</a></li>
+                <li><a class="footer-link" href="#">Privacy Policy</a></li>    
+            </ul>
+        </div>
+    </footer>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/product-list.js"></script>
+    <!-- jQuery -->
+    <!-- <script src="assets/js/jquery.js"></script> -->
+</body>
+</html>
